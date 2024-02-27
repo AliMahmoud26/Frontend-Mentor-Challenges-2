@@ -1,0 +1,105 @@
+// Importing the variable section
+@use '../partials/variables' as *;
+
+
+// Styling the productive section
+main {
+    .productive {
+        background-color: $DarkBlue2;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .image {
+                margin-right: 4rem;
+            }
+            
+            .productive__text {
+                
+                h1 {
+                    // color: $white;
+                    font-size: 2.75rem;
+                    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    text-decoration: none;
+                }
+
+                p {
+                    margin: 1rem 0 1.5rem;
+                    color: $LightGray;
+                }
+
+                .productive__link {
+                    color: $Blue;
+                    display: flex;
+                    align-items: center;
+                    transition: $transition;
+                    position: relative;
+
+                    &:hover {
+                        color: $white;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -7px;
+                            left: 0;
+                            height: 1px;
+                            width: 150px;
+                            background-color: $white;
+                        }
+                    }
+
+                    img {
+                        margin-left: .35rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    main {
+        .productive {
+            padding: 0 2rem;
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .image {
+                    margin: 0 auto 4rem;
+                }
+
+                .productive__link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        .productive {
+            margin-top: -1rem;
+            .container {
+                .productive__text {
+                    text-align: center;
+                    h1 {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

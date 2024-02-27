@@ -1,0 +1,13 @@
+// Importing the files of the global folder
+@use 'sass/partials/globals';
+@use 'sass/partials/variables';
+
+// Importing the files of the sections folder
+@use 'sass/sections/header';
+@use 'sass/sections/intro';
+@use 'sass/sections/features';
+@use 'sass/sections/productive';
+@use 'sass/sections/team';
+@use 'sass/sections/form';
+@use 'sass/sections/author';
+@use 'sass/sections/footer';

@@ -1,0 +1,94 @@
+// Importing the variable section
+@use '../partials/variables' as *;
+
+
+// Styling the team section
+main {
+    .team {
+        background-color: $DarkBlue2;
+        padding: 10rem 0 4rem;
+        
+        .container {
+            .team__members {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+                
+                .quotes {
+                    position: absolute;
+                    top: -38px;
+                    left: 7px;
+                    z-index: -1;
+                }
+
+                .team__member {
+                    background-color: $DarkBlue4;
+                    padding: 2rem 2rem 1.3rem;
+                    margin: 0 1rem;
+                    box-shadow: 5px 5px 10px rgba(0 0 0 / 40%);
+                    border-radius: .25rem;
+                    transition: $transition;
+
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+
+                    p {
+                        color: $LightGray;
+                        font-weight: 700;
+                    }
+
+                    .member__info {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1.5rem;
+
+                        img {
+                            width: 30px;
+                            border-radius: 50%;
+                            margin-right: .75rem;
+                        }
+
+                        .member {
+                            display: flex;
+                            flex-direction: column;
+
+                            h4 {
+                                color: $white;
+                                margin-bottom: .25rem;
+                            }
+
+                            span {
+                                color: $LightGray;
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    main {
+        .team {
+            margin-top: -1rem;
+            .container {
+                .team__members {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .team__member {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

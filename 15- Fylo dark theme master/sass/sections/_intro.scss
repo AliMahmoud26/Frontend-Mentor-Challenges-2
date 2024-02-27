@@ -1,0 +1,137 @@
+// Importing the variable section
+@use '../partials/variables' as *;
+
+
+// Styling the container of the intro section
+main {
+    .intro {
+        background-color: $DarkBlue1;
+        padding: 4rem 0 2rem;
+        min-height: 100vh;
+        
+        .container {
+            position: relative;
+            
+            .intro__content {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 100;
+
+                .intro__text {
+                    margin-top: 2rem;
+                    text-align: center;
+                    h2 {
+                        // color: $white;
+                        font-size: 2rem;
+
+                        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        text-decoration: none;
+                    }
+
+                    p {
+                        margin: 2rem 0 2.25rem;
+                        color: $LightGray;
+                    }
+
+                    .intro__btn {
+                        color: $white;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+                        border-radius: 2rem;
+                        padding: .75rem 5rem;
+                    }
+                }
+            }
+        }
+
+        .curve__img {
+            position: relative;
+            top: 530px;
+            z-index: 1;
+            width: 100%;
+            max-height: 27vh;
+        }
+
+        .curve__mobile {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    main {
+        .intro {
+            .container {
+                .intro__content {
+                    .intro__text {
+                        h2 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .curve__img {
+                top: 340px;
+                min-height: 45vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        .intro {
+            margin-top: -1rem;
+            .container {
+                .intro__content {
+                    .intro__text {
+                        h2 {
+                            font-size: 1.25rem;
+                            line-height: 1.4;
+                        }
+
+                        .intro__btn {
+                            padding: .5rem 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        .intro {
+            .container {
+                .intro__content {
+                    .intro__text {
+                        .intro__btn {
+                            padding: .5rem 2rem;
+                        }
+                    }
+                }
+            }
+
+            .curve__img {
+                display: none;
+            }
+
+            .curve__mobile {
+                position: relative;
+                width: 100%;
+                display: block;
+                top: 440px;
+                min-height: 30vh;
+            }
+        }
+    }
+}

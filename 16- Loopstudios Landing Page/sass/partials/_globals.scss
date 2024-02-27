@@ -1,0 +1,63 @@
+// Importing the variables file
+@use './variables' as *;
+@use './mixins' as *;
+
+// Importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: {
+        size: 15px;
+        family: $FontFamilyAlata;
+    }
+}
+
+.container {
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+        .container {
+            width: 78rem;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        .container {
+            width: 64.7rem;
+        }
+    }
+
+    @include breakpoint-up(small) {
+        .container {
+            width: 50rem;
+        }
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font: {
+        family: $FontFamilyJosefin;
+        weight: $FontWeight300;
+    }
+}
+

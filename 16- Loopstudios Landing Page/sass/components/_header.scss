@@ -1,0 +1,115 @@
+// Importing the variables file
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling the header component
+header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    padding: 3rem $padding;
+
+    @include breakpoint-down(small) {
+        padding: 2rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            @include breakpoint-down(small) {
+                width: 8rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        nav {
+            position: relative;
+
+            .bars-icon {
+                display: none;
+                color: $White;
+                font-size: 1.5rem;
+
+                @include breakpoint-down(small) {
+                    display: flex;
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                .times-icon {
+                    display: none; 
+                    color: $White;
+                    font-size: 2rem;
+
+                    @include breakpoint-down(small) {
+                        display: block;
+                        align-self: flex-end;
+                        padding-bottom: 4rem;
+                    }
+                }
+
+                @include breakpoint-down(small) {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: -2rem;
+                    left: -17.5rem;
+                    background-color: $Black;
+                    padding: 2rem;
+                    width: 100vw;
+                    height: 100vh;
+
+                    &.show {
+                        display: flex;
+                    }
+                    
+                }
+
+                li {
+                    padding-left: 2rem;
+
+                    @include breakpoint-down(small) {
+                        padding-bottom: 2rem;
+                    }
+
+                    a {
+                        position: relative;
+                        color: $White;
+
+                        @include breakpoint-down(small) {
+                            font: {
+                                size: 2rem;
+                                weight: $FontWeight300;
+                                family: $FontFamilyJosefin
+                            }
+                        }
+                        
+                        &:hover {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 2rem;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 1.25rem;
+                                height: 2px;
+                                background-color: $White;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+// Partials files
+@use './partials/globals';
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+// Components Files
+@use './components/header';
+@use './components/hero';
+@use './components/about';
+@use './components/products';
+@use './components/footer';

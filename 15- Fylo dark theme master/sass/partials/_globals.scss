@@ -1,0 +1,62 @@
+// Importig other files
+@use './variables' as *;
+
+// Importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+// Global Styling
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: {
+        size: 14px;
+        family: 'Raleway', sans-serif;
+    }
+}
+
+.container {
+    padding: 0 1.125rem;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+// Media Queries
+
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+
+// font-family: 'Open Sans', sans-serif;

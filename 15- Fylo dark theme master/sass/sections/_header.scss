@@ -1,0 +1,111 @@
+// Importing the variable section
+@use '../partials/variables' as *;
+
+main {
+    header {
+        background-color: $DarkBlue1;
+        padding: 2rem 0;
+        // width: 100%;
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        // Styling the logo of the document
+        .logo {
+            width: 7rem;
+        }
+
+        // Start styling the nav section
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    padding-left: 3rem;
+                    
+                    a {
+                        color: $LightGray;
+                        transition: $transition;
+                        position: relative;
+
+                        &:hover {
+                            color: $white;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                height: 1px;
+                                width: 100%;
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        }
+        // Styling the container of the intro section
+    }
+}
+
+// @media (max-width: 500px) {
+//     main {
+//         width: 100vw;
+//         header {
+//             .logo {
+//                 width: 10px;
+    
+//                 img {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+/* Your non-responsive styles can go here */
+
+/* Responsive styles for screens with a maximum width of 767px */
+@media (max-width: 767px) {
+    main {
+        max-width: 750px;
+        
+        header {
+            padding: 2rem 1rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        min-width: 480px;
+        header {
+            padding: 2rem 1rem;
+            .container { 
+                .logo {
+                    width: 80px;
+                }
+        
+                // nav {
+                //     text-align: center;
+            
+                //     ul {
+                //         padding: 0;
+            
+                //         li {
+                //             margin-bottom: 10px;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}
