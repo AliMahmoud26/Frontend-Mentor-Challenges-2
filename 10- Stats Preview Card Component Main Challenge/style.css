@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca:wght@300;400;700&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100;300;500;600;800;900&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif, 'Lexend Deca';
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    width: 1200px;
+}
+
+.container .card {
+    display: flex;
+    border-radius: 10px;
+    max-width: 70rem;
+    box-shadow: 0 5px 10px rgba(0 0 0 / 40%);
+    /* overflow: hidden; */
+}
+.card .card-content {
+    background-color: hsl(244, 38%, 16%);
+    max-width: 100%;
+    padding: 70px 70px 20px;
+    border-radius: 10px 0 0 10px;
+}
+.card .card-content h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 35px;
+}
+.card .card-content h1 span {
+    color: hsl(277, 64%, 61%);
+}
+.card .card-content p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 20px;
+    line-height: 1.7;
+}
+.container .card .image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
+}
+.container .card .image .mobile {
+   display: none;
+}
+.container .card .image .desktop {
+    height: 100%;
+}
+.container .card .image::before {
+    content: '';
+    position: absolute;
+    background-color: hsla(277, 64%, 61%);
+    opacity: .4;
+    height: 100%;
+    width: 100%;
+    /* top: 0; */
+    /* left: 0; */
+}
+.container .card .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0;
+    text-transform: uppercase;
+}
+
+.container .card .stats .stat h4 {
+    color: hsl(0, 0%, 100%);
+    font-size: 24px;
+    margin-right: 2rem;
+}
+.container .card .stats .stat span {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    margin-top: 10px;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        width: 80%;
+    }
+    
+    .container .card {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .container .card .card-content {
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .container .card .image {
+        width: 500;
+        border-radius: 0px 0px 0px 0px;
+     }
+    .container .card .image .mobile {
+        display: flex;
+     }
+     .container .card .image .desktop {
+         display: none;
+     }
+    .container .card h1 {
+        font-size: 1.5rem;
+    }
+}

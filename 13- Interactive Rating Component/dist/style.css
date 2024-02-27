@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  font-size: 16px;
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 1rem;
+  width: 25rem;
+  padding: 2rem;
+}
+main .container .rating__section .star {
+  background-color: hsla(212, 21%, 28%, 0.401);
+  padding: 1rem;
+  border-radius: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .rating__section .rating__text {
+  margin-top: 2rem;
+}
+main .container .rating__section .rating__text > h2 {
+  color: hsl(0, 0%, 100%);
+}
+main .container .rating__section .rating__text > p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  color: hsl(216, 12%, 54%);
+}
+main .container .rating__section .ratings {
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .container .rating__section .ratings span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(212, 21%, 28%, 0.401);
+  color: hsl(216, 12%, 54%);
+  border-radius: 50%;
+  padding: 0.9rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .container .rating__section .ratings span:hover {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+main .container .rating__section .ratings span.active {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+main .container .rating__section .submit__btn {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  text-decoration: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s ease;
+}
+main .container .rating__section .submit__btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+main .container .thank__section {
+  margin-top: 1rem;
+  display: none;
+  text-align: center;
+}
+main .container .thank__section .thank__img {
+  margin-bottom: 1.25rem;
+}
+main .container .thank__section .rate__text {
+  background-color: hsla(212, 21%, 28%, 0.401);
+  color: hsl(25, 97%, 53%);
+  border-radius: 2rem;
+  padding: 0.5rem 1.125rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+main .container .thank__section .thank__text > h2 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.5rem;
+}
+main .container .thank__section .thank__text > p {
+  color: hsl(216, 12%, 54%);
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 21rem;
+  }
+}/*# sourceMappingURL=style.css.map */

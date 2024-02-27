@@ -1,0 +1,96 @@
+// Importing other files
+@use '../globals/variables' as*;
+
+
+// Styling the hero section
+.hero {
+    padding: 0 10rem; 
+
+    .hero-container {
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .left-content {
+
+                margin-top: 7rem;
+
+                h1 {
+                    font-size: 5rem;
+                }
+
+                p {
+                    color: $MediumGray;
+                    line-height: 1.8;
+                    margin: 4rem 0;
+                }
+
+                .more-btn {
+                    color: $AlmostWhite;
+                    background-color: $AlmostBlack;
+                    border: 2px solid $AlmostBlack;
+                    border-radius: .75rem;
+                    padding: 1rem 2rem;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $AlmostBlack;
+                        background-color: transparent;
+                    }
+                }
+
+                .sponsores {
+                    margin-top: 7rem;
+                    display: flex;
+                    width: 100%;
+                    // aspect-ratio: 1/1;
+                    
+                    > img {
+                        padding-right: 3rem;
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .right-content {
+                .image {
+                    width: 500px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Responsive Desingn
+@media (max-width: 991px) {
+    .hero {
+        .hero-container {
+            padding: 4rem 0;
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+
+                .left-content {
+
+                    h1 {
+                        font-size: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}

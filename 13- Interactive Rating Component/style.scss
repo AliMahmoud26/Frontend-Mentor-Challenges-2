@@ -1,0 +1,167 @@
+// Importing google fonts
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+// Color Variables
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$darkBlue-2: hsla(212, 21%, 28%, 0.401);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$orange: hsl(25, 97%, 53%);
+
+
+// Global Style
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// .hidden {
+//     display: none;
+// }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $veryDarkBlue;
+    font: {
+        size: 16px;
+        family: 'Overpass', sans-serif;
+    };
+}
+
+main {
+    background-color: $darkBlue;
+    // box-shadow: 10px 10px 5px rgba(0, 0, 0, .1);
+    border-radius: 1rem;
+    width: 25rem;
+    padding: 2rem;
+
+    .container {
+
+        // Styling the rating section
+        .rating__section {     
+
+            .star {
+                background-color: $darkBlue-2;
+                padding: 1rem;
+                border-radius: 50%;
+                width: fit-content;
+                // text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .rating__text {
+                margin-top: 2rem;
+                > h2 {
+                    color: $white;
+                }
+    
+                > p {
+                    margin-top: .5rem;
+                    line-height: 1.5;
+                    color: $mediumGrey;
+                }
+            }
+    
+            .ratings {
+                margin: 1.5rem 0 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+    
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $darkBlue-2;
+                    color: $mediumGrey;
+                    border-radius: 50%;
+                    padding: .9rem 1.25rem;
+                    cursor: pointer;
+                    transition: all .3s ease;
+    
+                    &:hover {
+                        background-color: $lightGrey;
+                        color: $white;
+                    }
+
+                    &.active {
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+            }
+    
+            .submit__btn {
+                color: $white;
+                background-color: $orange;
+                text-decoration: none;
+                width: 100%;
+                padding: .75rem 1rem;
+                font-size: 1.25rem;
+                // font-weight: 600;
+                border-radius: 2rem;
+                border: none;
+                // margin-bottom: 2rem;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: .15rem;
+                transition: all .3s ease;
+    
+                &:hover {
+                    background-color: $white;
+                    color: $orange;
+                }
+            }
+        }
+
+        // Styling the thank section
+        .thank__section {
+            margin-top: 1rem;
+            display: none;
+            text-align: center;
+
+            .thank__img {
+                margin-bottom: 1.25rem;
+            }
+
+            .rate__text {
+                background-color: $darkBlue-2;
+                color: $orange;
+                border-radius: 2rem;
+                padding: .5rem 1.125rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+
+            .thank__text {
+                > h2 {
+                    color: $white;
+                    margin-bottom: .5rem;
+                }
+
+                > p {
+                    color: $mediumGrey;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    main {
+        width: 21rem;
+    }
+}

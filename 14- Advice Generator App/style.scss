@@ -1,0 +1,105 @@
+// Importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+// Variables
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+
+
+// Globals
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $DarkBlue;
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    width: 500px;
+    background-color: $DarkGrayishBlue;
+    border-radius: 1rem;
+    position: relative;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 4rem 3rem;
+        text-align: center;
+
+
+        p {
+            color: $NeonGreen;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+            font-size: .75rem;
+        }
+
+        h2 {
+            color: $LightCyan;
+            font-size: 1.75rem;
+        }
+
+        .generatorBtn {
+            position: absolute;
+            bottom: -1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $NeonGreen;
+            border: none;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .3s ease-out;
+
+            &:hover {
+                filter: drop-shadow(0 0 0.75rem $NeonGreen);
+            }
+        }
+    }
+}
+
+
+
+// Responsive Design
+// On 767px Width Screen
+@media screen and (max-width: 767px) {
+    main {
+        width: 450px;
+
+        .container {
+            .desktopImg {
+                width: 100%;
+            }
+        }
+    }    
+}
+
+// On 500px Width Screen
+@media screen and (max-width: 500px) {
+    main {
+        width: 350px;
+    }    
+}
+
+// On 360px Width Screen
+@media screen and (max-width: 360px) {
+    main {
+        width: 300px;
+    }    
+}

@@ -1,0 +1,255 @@
+// Importing other files
+@use '../globals/variables' as*;
+
+
+// Styling the navbar section
+main {
+
+    .nav-mobile {
+        display: none;
+    }
+    // Styling the navbar section
+    nav {
+        padding: 2rem 4rem;
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // Styling the left section of the navbar
+            .nav-left {
+                display: flex;
+                align-items: center;
+
+                .image {
+                    margin-right: 4rem;
+                }
+
+                ul {
+                    display: flex;
+
+                    li {
+                        padding-left: 2rem;
+                        align-items: center;
+                        position: relative;
+                        transition: $transition;
+
+                        a {
+                            color: $MediumGray;
+                            transition: $transition;
+                            
+                            > img {
+                                transition: $transition;
+                                width: 1rem;
+                            }
+
+                            &:hover {
+                                color: $AlmostBlack;
+
+                                // > img {
+                                //     transform: rotate(180deg);
+                                // }
+                            }
+                        }
+
+
+                        // styling the first submenu
+                        .first {
+                            position: absolute;
+                            left: -4rem;
+                            top: 2rem;
+                            padding: 1rem 2rem;
+                            background-color: $white;
+                            box-shadow: 0 0 10px 10px rgba(0, 0, 0, .2);
+                            border-radius: .75rem;
+                            display: none;
+
+                            &.show {
+                                display: block;
+                            }
+                            
+                            > ul {
+                                display: flex;
+                                flex-direction: column;
+
+                                > li {
+                                    display: flex;
+                                    align-content: center;
+                                    padding: .5rem 0;
+                                    
+                                    > a {
+                                        > img {
+                                            margin-right: 1rem;
+                                            transform: rotate(0);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                            .second {
+                                position: absolute;
+                                top: 2rem;
+                                padding: 1rem 2rem;
+                                background-color: $white;
+                                box-shadow: 0 0 10px 10px rgba(0, 0, 0, .2);
+                                border-radius: .75rem;
+                                display: none;
+
+                                > ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    
+                                    > li {
+                                        padding: .5rem 0;
+                                    }
+                                }
+
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                            
+                    }
+                }
+            }
+
+            // Styling the right section of the navbar
+            .nav-right {
+                > a {
+                    color: $MediumGray;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $AlmostBlack;
+                    }
+
+                    &.outlined-btn {
+                        border: 2px solid $AlmostBlack;
+                        border-radius: 1rem;
+                        padding: .80rem 1.5rem;
+                        margin-left: 2rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // Styling the hero section
+    .hero {
+        padding: 0 10rem; 
+
+        .hero-container {
+            .content {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .left-content {
+
+                    margin-top: 7rem;
+
+                    h1 {
+                        font-size: 5rem;
+                    }
+
+                    p {
+                        color: $MediumGray;
+                        line-height: 1.8;
+                        margin: 4rem 0;
+                    }
+
+                    .more-btn {
+                        color: $AlmostWhite;
+                        background-color: $AlmostBlack;
+                        border: 2px solid $AlmostBlack;
+                        border-radius: .75rem;
+                        padding: 1rem 2rem;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        transition: $transition;
+
+                        &:hover {
+                            color: $AlmostBlack;
+                            background-color: transparent;
+                        }
+                    }
+
+                    .sponsores {
+                        margin-top: 7rem;
+                        display: flex;
+                        width: 100%;
+                        // aspect-ratio: 1/1;
+                        
+                        > img {
+                            padding-right: 3rem;
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+                .right-content {
+                    .image {
+                        width: 500px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// @media (min-width: 992px) {
+//     nav {
+//         .nav-container {
+//             display: block;
+//         }
+        
+//         .nav-mobile {
+//             display: none;
+//         }
+//     }
+// }
+
+@media (max-width: 991px) {
+    // nav {
+    //     .nav-left {
+    //         display: none;
+    //     }
+    //     .nav-right {
+    //         display: none;
+    //     }
+    //     .nav-mobile {
+    //            display: block;
+    //     }
+    // } 
+
+
+
+    .hero {
+        .hero-container {
+            padding: 4rem 0;
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+
+                .left-content {
+
+                    h1 {
+                        font-size: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}

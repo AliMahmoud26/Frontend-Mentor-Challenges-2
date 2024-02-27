@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Amiri:wght@400;700&family=Bagel+Fat+One&family=Belanosima:wght@400;600;700&family=Carter+One&family=Epilogue:wght@500;700&family=Lobster&family=Lugrasimo&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Epilogue", sans-serif;
+}
+
+.container {
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main .nav-mobile {
+  display: none;
+}
+main nav {
+  padding: 2rem 4rem;
+}
+main nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main nav .nav-container .nav-left {
+  display: flex;
+  align-items: center;
+}
+main nav .nav-container .nav-left .image {
+  margin-right: 4rem;
+}
+main nav .nav-container .nav-left ul {
+  display: flex;
+}
+main nav .nav-container .nav-left ul li {
+  padding-left: 2rem;
+  align-items: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+main nav .nav-container .nav-left ul li a {
+  color: hsl(0, 0%, 41%);
+  transition: all 0.4s ease;
+}
+main nav .nav-container .nav-left ul li a > img {
+  transition: all 0.4s ease;
+  width: 1rem;
+}
+main nav .nav-container .nav-left ul li a:hover {
+  color: hsl(0, 0%, 8%);
+}
+main nav .nav-container .nav-left ul li .first {
+  position: absolute;
+  left: -4rem;
+  top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  display: none;
+}
+main nav .nav-container .nav-left ul li .first.show {
+  display: block;
+}
+main nav .nav-container .nav-left ul li .first > ul {
+  display: flex;
+  flex-direction: column;
+}
+main nav .nav-container .nav-left ul li .first > ul > li {
+  display: flex;
+  align-content: center;
+  padding: 0.5rem 0;
+}
+main nav .nav-container .nav-left ul li .first > ul > li > a > img {
+  margin-right: 1rem;
+  transform: rotate(0);
+}
+main nav .nav-container .nav-left ul li .second {
+  position: absolute;
+  top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  display: none;
+}
+main nav .nav-container .nav-left ul li .second > ul {
+  display: flex;
+  flex-direction: column;
+}
+main nav .nav-container .nav-left ul li .second > ul > li {
+  padding: 0.5rem 0;
+}
+main nav .nav-container .nav-left ul li .second.active {
+  display: block;
+}
+main nav .nav-container .nav-right > a {
+  color: hsl(0, 0%, 41%);
+  transition: all 0.4s ease;
+}
+main nav .nav-container .nav-right > a:hover {
+  color: hsl(0, 0%, 8%);
+}
+main nav .nav-container .nav-right > a.outlined-btn {
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin-left: 2rem;
+  text-align: center;
+}
+main .hero {
+  padding: 0 10rem;
+}
+main .hero .hero-container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .hero .hero-container .content .left-content {
+  margin-top: 7rem;
+}
+main .hero .hero-container .content .left-content h1 {
+  font-size: 5rem;
+}
+main .hero .hero-container .content .left-content p {
+  color: hsl(0, 0%, 41%);
+  line-height: 1.8;
+  margin: 4rem 0;
+}
+main .hero .hero-container .content .left-content .more-btn {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+main .hero .hero-container .content .left-content .more-btn:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: transparent;
+}
+main .hero .hero-container .content .left-content .sponsores {
+  margin-top: 7rem;
+  display: flex;
+  width: 100%;
+}
+main .hero .hero-container .content .left-content .sponsores > img {
+  padding-right: 3rem;
+  width: 100%;
+}
+main .hero .hero-container .content .right-content .image {
+  width: 500px;
+}
+main .hero .hero-container .content .right-content .image img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero .hero-container {
+    padding: 4rem 0;
+  }
+  .hero .hero-container .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .hero .hero-container .content .left-content h1 {
+    font-size: 20rem;
+  }
+}
+.hero {
+  padding: 0 10rem;
+}
+.hero .hero-container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.hero .hero-container .content .left-content {
+  margin-top: 7rem;
+}
+.hero .hero-container .content .left-content h1 {
+  font-size: 5rem;
+}
+.hero .hero-container .content .left-content p {
+  color: hsl(0, 0%, 41%);
+  line-height: 1.8;
+  margin: 4rem 0;
+}
+.hero .hero-container .content .left-content .more-btn {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+.hero .hero-container .content .left-content .more-btn:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: transparent;
+}
+.hero .hero-container .content .left-content .sponsores {
+  margin-top: 7rem;
+  display: flex;
+  width: 100%;
+}
+.hero .hero-container .content .left-content .sponsores > img {
+  padding-right: 3rem;
+  width: 100%;
+}
+.hero .hero-container .content .right-content .image {
+  width: 500px;
+}
+.hero .hero-container .content .right-content .image img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero .hero-container {
+    padding: 4rem 0;
+  }
+  .hero .hero-container .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .hero .hero-container .content .left-content h1 {
+    font-size: 20rem;
+  }
+}/*# sourceMappingURL=style.css.map */
